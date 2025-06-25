@@ -1,1 +1,13 @@
+title: Morgan Fox
+description: CSE 232 GitHub Pages Assignment
+baseurl: "" # leave empty for GitHub Pages repo named username.github.io
+url: "https://morgan-fox.github.io"
+
+theme: minima
+
+# Optional but good to have
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
