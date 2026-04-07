@@ -1,4 +1,198 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  padding: 40px;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f7f4;
+  color: #2e2e2e;
+  line-height: 1.6;
+}
+
+/* HEADER / NAV */
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: #f9f7f4;
+  padding: 1.2rem 2rem;
+  border-bottom: 1px solid #e5e0da;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #2e2e2e;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+/* subtle underline hover */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: #2e2e2e;
+  left: 0;
+  bottom: -3px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  padding: 6rem 2rem 4rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #8c867f;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* SECTIONS */
+.section-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-heading h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+}
+
+.section-heading p {
+  color: #777;
+  font-size: 0.95rem;
+}
+
+/* ABOUT + OFF THE CLOCK */
+.about-section,
+.off-the-clock-section {
+  padding: 4rem 2rem;
+}
+
+.about-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.about-card h2 {
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 1rem;
+}
+
+.about-card p {
+  margin-bottom: 1rem;
+}
+
+/* PROJECTS */
+.projects-section {
+  padding: 4rem 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.project-image {
+  height: 140px;
+  background-color: #eae6e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.project-content {
+  padding: 1rem;
+}
+
+.project-tag {
+  font-size: 0.75rem;
+  color: #8c867f;
+  margin-bottom: 0.5rem;
+}
+
+.project-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* FOOTER */
+.site-footer {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-top: 1px solid #e5e0da;
+}
+
+.footer-links a {
+  margin: 0 0.8rem;
+  text-decoration: none;
+  color: #2e2e2e;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
 }
