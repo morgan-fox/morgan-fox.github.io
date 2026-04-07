@@ -3,11 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Morgan Fox</title>
+  <title>Morgan Fox | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Welcome!</h1>
-  <p>Data scientist combining analytics, visualization, and storytelling to uncover patterns and insights in complex data.</p>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="logo">Morgan Fox</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#off-the-clock">Off the Clock</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Data Science • Storytelling</p>
+      <h1>Hi, I’m Morgan.</h1>
+      <p class="hero-text">
+        I’m a data science student at Michigan State University combining analytics,
+        visualization, and storytelling to uncover patterns and insights in complex data.
+      </p>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="about-card">
+        <h2>About</h2>
+        <p>
+          I'm a senior Data Science major at Michigan State University with a passion for exploring how data can tell stories
+          and reveal meaningful connections, whether through interactive visualizations, network analysis, or uncovering patterns
+          across complex datasets
+        </p>
+        <p>
+        My work in MSU’s Lab for the Education and Advancement in Digital Research (LEADR) has deepened my curiosity about how technology
+        can make information more accessible and engaging. Through the lab, I’m currently part of a grant-funded project that uses social
+        network analysis to study historical correspondence and relationships
+        </p>
+        <p>
+          I'm excited by opportunities where data goes beyond numbers, where it can inform, connect, and inspire meaningful change
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <div class="section-heading">
+        <h2>Projects</h2>
+        <p>A few projects I’ve loved building lately.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-image placeholder">Project 1</div>
+          <div class="project-content">
+            <p class="project-tag">Digital Humanities</p>
+            <h3>Networking the Revolution</h3>
+            <p>
+              A digital humanities project using network analysis and mapping
+              to explore historical correspondence and communication patterns.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image placeholder">Project 2</div>
+          <div class="project-content">
+            <p class="project-tag">Sports Analytics</p>
+            <h3>Soccer Analytics Projects</h3>
+            <p>
+              Data-driven work exploring match outcomes, player performance,
+              and storytelling through sports data.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image placeholder">Project 3</div>
+          <div class="project-content">
+            <p class="project-tag">Data Visualization</p>
+            <h3>Climate & Emissions Visualization</h3>
+            <p>
+              A visual project focused on presenting long-term greenhouse gas emissions
+              data in a clear, engaging, and thoughtful way.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image placeholder">Project 4</div>
+          <div class="project-content">
+            <p class="project-tag">Research + Mapping</p>
+            <h3>Historical Mapping Work</h3>
+            <p>
+              Interactive and publication-oriented maps designed to highlight
+              place, movement, and regional context in historical datasets.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="off-the-clock" class="off-the-clock-section">
+      <div class="section-heading">
+        <h2>Off the Clock</h2>
+        <p>A peek into the things I love outside of work and school.</p>
+      </div>
+
+      <div class="about-card">
+        <p>
+          I'm very into sports! I love watching and playing soccer, hockey, and pickleball in my freetime
+        </p>
+        <p>
+          I also love spending time up north in Michigan and more importantlym hanging out with my dog Suki
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <h2>Let’s Connect</h2>
+    <p>You can find me here:</p>
+    <div class="footer-links">
+      <a href="https://github.com/morgan-fox" target="_blank">GitHub</a>
+      <a href="www.linkedin.com/in/morganrfox" target="_blank">LinkedIn</a>
+      <a href="morganfox1028@gmail.com">Email</a>
+    </div>
+  </footer>
 </body>
 </html>
