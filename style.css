@@ -1,79 +1,99 @@
-/* COLOR SYSTEM */
 :root {
+  --bg: #f8f6f2;
+  --bg-soft: #f3f6f2;
+  --text: #2b2b2b;
+  --text-soft: #5f5f5f;
+  --line: #e7e1d8;
+  --card: #ffffff;
   --sage: #8f9f8a;
-  --sage-light: #dfe6dc;
   --sage-muted: #6f7d6b;
+  --sage-light: #dfe6dc;
 }
 
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BASE */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f8f6f2;
-  color: #2b2b2b;
+  background-color: var(--bg);
+  color: var(--text);
   line-height: 1.6;
   letter-spacing: 0.2px;
 }
 
-/* TYPOGRAPHY */
-h1, h2, h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-/* HEADER */
+h1,
+h2,
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+/* Header */
+
 .site-header {
   position: sticky;
   top: 0;
-  background: rgba(248, 246, 242, 0.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid #e8e3dc;
-  padding: 1.2rem 2rem;
   z-index: 1000;
+  background: rgba(248, 246, 242, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
 }
 
 .nav {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-size: 1.7rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: var(--text);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.7rem;
 }
 
 .nav-links a {
-  margin-left: 1.8rem;
-  text-decoration: none;
-  color: #2b2b2b;
-  font-size: 0.9rem;
   position: relative;
-  opacity: 0.8;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+  opacity: 0.85;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
-/* NAV HOVER */
 .nav-links a:hover {
-  opacity: 1;
   color: var(--sage);
+  opacity: 1;
 }
 
-/* UNDERLINE EFFECT */
 .nav-links a::after {
   content: "";
   position: absolute;
+  left: 0;
+  bottom: -0.25rem;
   width: 0;
   height: 1px;
-  background: var(--sage);
-  left: 0;
-  bottom: -4px;
+  background-color: var(--sage);
   transition: width 0.3s ease;
 }
 
@@ -81,161 +101,282 @@ h1, h2, h3 {
   width: 100%;
 }
 
-/* HERO */
+/* Main spacing */
+
+main {
+  width: 100%;
+}
+
+.hero,
+.about-section,
+.projects-section,
+.off-the-clock-section,
+.site-footer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Hero */
+
 .hero {
-  padding: 7rem 2rem 5rem;
-  max-width: 750px;
+  max-width: 800px;
   margin: 0 auto;
+  padding-top: 7rem;
+  padding-bottom: 5rem;
   text-align: center;
 }
 
 .eyebrow {
   font-size: 0.8rem;
-  letter-spacing: 2px;
   text-transform: uppercase;
+  letter-spacing: 2px;
   color: var(--sage-muted);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .hero h1 {
-  font-size: 3.2rem;
+  font-size: clamp(3rem, 6vw, 4.4rem);
+  line-height: 1;
   margin-bottom: 1rem;
 }
 
 .hero-text {
+  max-width: 640px;
+  margin: 0 auto;
   font-size: 1.05rem;
-  color: #5c5c5c;
+  color: var(--text-soft);
 }
 
-/* SECTIONS */
+/* Shared section heading */
+
 .section-heading {
   text-align: center;
   margin-bottom: 3rem;
 }
 
 .section-heading h2 {
-  font-size: 2.2rem;
-  margin-bottom: 0.3rem;
+  font-size: 2.4rem;
+  margin-bottom: 0.35rem;
 }
 
 .section-heading p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--sage-muted);
 }
 
-/* ABOUT + OFF THE CLOCK */
-.about-section,
-.off-the-clock-section {
-  padding: 5rem 2rem;
-}
+/* About */
 
-/* subtle sage background for off-the-clock */
-.off-the-clock-section {
-  background-color: #f3f6f2;
+.about-section {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
 }
 
 .about-card {
-  max-width: 680px;
+  max-width: 760px;
   margin: 0 auto;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 18px;
   padding: 2.5rem;
-  background: rgba(255,255,255,0.6);
-  border: 1px solid #eae6df;
-  border-radius: 14px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(43, 43, 43, 0.04);
 }
 
 .about-card h2 {
-  margin-bottom: 1.2rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .about-card p {
-  margin-bottom: 1rem;
   color: #444;
+  margin-bottom: 1rem;
 }
 
-/* PROJECTS */
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Projects */
+
 .projects-section {
-  padding: 5rem 2rem;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 1.8rem;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid #ebe6de;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(43, 43, 43, 0.07);
+  border-color: var(--sage-light);
+}
+
+.project-image {
+  height: 170px;
+  background: linear-gradient(135deg, #e8e3dc, #f3efe8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7c756d;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.project-content {
+  padding: 1.25rem;
+}
+
+.project-tag {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--sage);
+  margin-bottom: 0.45rem;
+}
+
+.project-content h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.45rem;
+}
+
+.project-content p {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+
+/* Off the Clock */
+
+.off-the-clock-section {
+  background-color: var(--bg-soft);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.hobbies-grid {
+  max-width: 1150px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.8rem;
 }
 
-.project-card {
-  background: #ffffff;
-  border-radius: 14px;
-  border: 1px solid #ebe7e1;
+.hobby-card {
+  background: var(--card);
+  border: 1px solid #ebe6de;
+  border-radius: 18px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+.hobby-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(43, 43, 43, 0.07);
   border-color: var(--sage-light);
 }
 
-.project-image {
-  height: 150px;
-  background: linear-gradient(135deg, #e9e4dd, #f3efe9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  color: #7a746d;
+.hobby-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #e8e3dc, #f3efe8);
 }
 
-.project-content {
-  padding: 1.2rem;
+.hobby-content {
+  padding: 1.25rem;
 }
 
-.project-tag {
-  font-size: 0.7rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--sage);
-  margin-bottom: 0.4rem;
+.hobby-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.45rem;
 }
 
-.project-content h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+.hobby-content p {
+  font-size: 0.95rem;
+  color: var(--text-soft);
 }
 
-.project-content p {
-  font-size: 0.9rem;
-  color: #5c5c5c;
-}
+/* Footer */
 
-/* FOOTER */
 .site-footer {
-  padding: 3rem 2rem;
   text-align: center;
-  border-top: 1px solid #e8e3dc;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  border-top: 1px solid var(--line);
 }
 
 .site-footer h2 {
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.site-footer p {
+  color: var(--text-soft);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
 }
 
 .footer-links a {
-  margin: 0 1rem;
   text-decoration: none;
-  color: #2b2b2b;
-  font-size: 0.9rem;
-  opacity: 0.8;
-  transition: all 0.2s ease;
+  color: var(--text);
+  font-size: 0.95rem;
+  opacity: 0.85;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .footer-links a:hover {
-  opacity: 1;
   color: var(--sage);
+  opacity: 1;
 }
 
-/* SMOOTH SCROLL */
-html {
-  scroll-behavior: smooth;
+/* Responsive */
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding-top: 5.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .about-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .project-image {
+    height: 150px;
+  }
+
+  .hobby-image {
+    height: 260px;
+  }
 }
