@@ -211,6 +211,13 @@ main {
   gap: 1.8rem;
 }
 
+/* Make entire card clickable */
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .project-card {
   background: var(--card);
   border: 1px solid #ebe6de;
@@ -223,6 +230,11 @@ main {
   transform: translateY(-6px);
   box-shadow: 0 14px 30px rgba(43, 43, 43, 0.07);
   border-color: var(--sage-light);
+}
+
+/* Ensures hover still works when wrapped in link */
+.project-link:hover .project-card {
+  transform: translateY(-6px);
 }
 
 .project-image {
@@ -257,6 +269,7 @@ main {
   font-size: 0.95rem;
   color: var(--text-soft);
 }
+
 
 /* Off the Clock */
 
